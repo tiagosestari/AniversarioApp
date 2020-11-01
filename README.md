@@ -19,7 +19,7 @@ A partir disso, aproveitei o design para implementar algumas funções usando **
 ## TELAS E FUNCIONAMENTO ##
 
 #### Tela de amigos (as) ####
-![alt text](hhttps://github.com/tiagosestari/AniversarioApp/tree/master/src/telas/amigos.PNG?raw=true)
+![alt text](https://github.com/tiagosestari/AniversarioApp/blob/master/src/telas/amigos.PNG)
 
 Usando react.js uma lista do estado é renderizada mostrando todos os amigos adicionados.
 A primeira linha é dinâmica chamada no componentDidMount() atualizada com a data de hoje e um pequeno código para formatá-la.
@@ -29,11 +29,11 @@ A primeira linha é dinâmica chamada no componentDidMount() atualizada com a da
 A tela de adicionar tem 3 campos: nome, data de nascimento e um de link para foto.
 A adição à lista funciona tanto pressionando o botão quanto apertando enter e os campos são limpos assim que o item é adicionado.
 
-![alt text](hhttps://github.com/tiagosestari/AniversarioApp/tree/master/src/telas/adicionar.PNG?raw=true)
+![alt text](https://github.com/tiagosestari/AniversarioApp/blob/master/src/telas/adicionar.PNG)
 
 ### Filtro ###
 
 É possível filtrar a lista de amigos (as) de modo a mostrar apenas os aniversariantes
 
-![alt text](hhttps://github.com/tiagosestari/AniversarioApp/tree/master/src/telas/amigos_sf.PNG?raw=true)
-![alt text](hhttps://github.com/tiagosestari/AniversarioApp/tree/master/src/telas/amigos_cf.PNG?raw=true)
+![alt text](https://github.com/tiagosestari/AniversarioApp/blob/master/src/telas/amigos_sf.PNG)
+![alt text](https://github.com/tiagosestari/AniversarioApp/blob/master/src/telas/amigos_cf.PNG)
