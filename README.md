@@ -19,10 +19,11 @@ A partir disso, aproveitei o design para implementar algumas funções usando **
 ## TELAS E FUNCIONAMENTO ##
 
 #### Tela de amigos (as) ####
-![alt text](https://github.com/tiagosestari/AniversarioApp/blob/master/src/telas/amigos.PNG)
 
 Usando react.js uma lista do estado é renderizada mostrando todos os amigos adicionados.
 A primeira linha é dinâmica chamada no componentDidMount() atualizada com a data de hoje e um pequeno código para formatá-la.
+
+![alt text](https://github.com/tiagosestari/AniversarioApp/blob/master/src/telas/amigos.PNG)
 
 #### Tela de adicionar ####
 
