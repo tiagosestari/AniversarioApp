@@ -97,7 +97,15 @@ class App extends React.Component {
     this.setState({filter: event.target.value})
 
     const novaLista = this.state.people.map((person) => {
-      if (person.date === this.state.today) {
+      let a = person.date.split("")
+      a = a.slice(0,5)
+      a = a.join("")
+
+      let b = this.state.today.split("")
+      b = b.slice(0,5)
+      b = b.join("")
+
+      if (a === b) {
          const novaPessoa = {
            ...person,
            eHoje: true
@@ -154,14 +162,25 @@ class App extends React.Component {
         image: this.state.novaImagem,
         eHoje: false
       }
+
+    
     
     const novaLista = [...this.state.people, novaEntrada]
 
     this.setState({people: novaLista})
 
-      
+    this.setState({novoNome: ""})
+    this.setState({novaData: ""})
+    this.setState({novaDataSistema: ""})
+    this.setState({novaImagem: ""})
        
      
+   }
+
+   apertouEnter = (event) => {
+      if (event.keyCode === 13) {
+        this.adicionarEntrada()
+      }
    }
     
 
@@ -220,16 +239,17 @@ class App extends React.Component {
         <section className="container">
 
           <h3>Adicionar Aniversariante</h3>
-
+          
+          
             <label for="name" >Nome:</label> <br />
-            <input type="text" name="nome" value={this.state.novoNome} onChange={this.onChangeNome}></input> <br /><br />
+            <input type="text" name="nome" value={this.state.novoNome} onChange={this.onChangeNome} onKeyUp={this.apertouEnter}></input> <br /><br />
             
             <label for="nascimento">Data de Nascimento:</label> <br />
-            <input type="date" name="nascimento" value={this.state.novaDataSistema} onChange={this.onChangeData}></input> <br /><br />
+            <input type="date" name="nascimento" value={this.state.novaDataSistema} onChange={this.onChangeData} onKeyUp={this.apertouEnter}></input> <br /><br />
 
             <label for="foto">Link da foto:</label> <br />
-            <input type="text" name="foto" value={this.state.novaImagem} onChange={this.onChangeFoto}></input> <br /><br />
-
+            <input type="text" name="foto" value={this.state.novaImagem} onChange={this.onChangeFoto} onKeyUp={this.apertouEnter}></input> <br /><br />
+          
           <button onClick={this.adicionarEntrada}> Adicionar </button>
          
         </section>
